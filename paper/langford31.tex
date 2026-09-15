@@ -72,7 +72,7 @@ and \textsf{US\$190}.
 
 \section{The problem, and what was known}
 
-A \emph{Langford pairing} of order $n$ places each of the integers
+A \emph{Langford pairing}~\cite{langford} of order $n$ places each of the integers
 $1,2,\dots,n$ twice into $2n$ slots so that the two copies of $k$ are separated
 by exactly $k$ intervening slots. For $n=4$:
 
@@ -96,9 +96,10 @@ slots $1$ and $6$ (four slots between them), and so on. Such pairings exist if
 and only if $n \equiv 0$ or $3 \pmod 4$, a condition due to Davies~\cite{davies}.
 
 Counting them is the hard problem. The known values form OEIS
-\texttt{A014552}~\cite{oeis}; enumeration by backtracking reaches $n=24$, and the
-algebraic method described below carried the sequence to $n=27$ and $n=28$ in
-2015~\cite{abl}. There it stopped for eleven years.
+\texttt{A014552}~\cite{oeis}; enumeration by backtracking reaches
+$n=24$~\cite{confiit}, and the algebraic method described below carried the
+sequence to $n=27$ and $n=28$ in 2015~\cite{abl}. There it stopped for eleven
+years.
 
 \begin{center}
 \begin{tabular}{@{}rll@{}}
@@ -302,8 +303,8 @@ give.
 Both cost real time, and both are reported here so that others need not repeat
 them.
 
-\emph{Kasteleyn's method does not apply.} A Pfaffian orientation would give
-$2^n n^3$ in place of $4^n$, and the record would fall in minutes. We refute its
+\emph{Kasteleyn's method~\cite{kasteleyn} does not apply.} A Pfaffian orientation
+would give $2^n n^3$ in place of $4^n$, and the record would fall in minutes. We refute its
 applicability under the weak and correct form of the problem (edge weighting,
 not constant parity), over $\mathrm{GF}(2)$ and over $\mathbb{Z}/2^k$ up to
 $k=32$.
@@ -515,11 +516,17 @@ recomputation any less than one produced by a human. It needs it more.
 \bibitem{abl} A. Assarpour, A. Bar-Noy, O. Liu.
   \emph{Counting Skolem Sequences}. arXiv:1507.00315 (2015, rev.\ 2017).
   \url{https://arxiv.org/abs/1507.00315}
+\bibitem{confiit} M. Krajecki, C. Jaillet, A. Bui \emph{et al.} Distributed
+  computation of Langford pairings (CONFIIT project), 2004--2005. Values up to
+  $n=24$.
 \bibitem{davies} R. O. Davies. \emph{On Langford's problem II}.
   Math.\ Gazette \textbf{43} (1959), 253--255.
 \bibitem{godfrey} M. Godfrey. Algebraic method (2002). No formal publication;
   described in~\cite{abl} §3 and in D. E. Knuth, \emph{TAOCP} vol.~4,
   pre-fascicle 5B, ``Langford pairs''.
+\bibitem{kasteleyn} P. W. Kasteleyn. \emph{The statistics of dimers on a
+  lattice}. Physica \textbf{27} (1961), 1209--1225; \emph{Dimer statistics and
+  phase transitions}. J.\ Math.\ Phys.\ \textbf{4} (1963), 287--293.
 \bibitem{knuth75} D. E. Knuth. \emph{Estimating the efficiency of backtrack
   programs}. Math.\ Comp.\ \textbf{29} (1975), 121--136.
 \bibitem{taocp2} D. E. Knuth. \emph{The Art of Computer Programming}, vol.~2,
